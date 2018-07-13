@@ -1,0 +1,32 @@
+<% include ../views/partials/header %>
+
+<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+
+<div class="container-fluid">
+  <form id="formreg" class="" action="/register" method="post">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+                <div class="card card-body">
+                    <h3 class="text-center mb-4">Cadastro</h3>
+                    <fieldset>
+                      <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input class="form-control input-lg" type="text" name="name" placeholder="Nome">
+                      </div>
+                      <label for="username">Usuário</label>
+                        <div class="form-group has-error">
+                            <input class="form-control input-lg" placeholder="User" name="username" type="text">
+                        </div>
+                        <label for="password">Senha</label>
+                        <div class="form-group has-success">
+                            <input class="form-control input-lg" placeholder="Password" name="password" type="password">
+                        </div>
+                        <input class="btn btn-lg btn-primary btn-block" value="Enviar" type="submit">
+                    </fieldset>
+                </div>
+        </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<%- include ../layouts/header.ejs %>
+
+<form action="/users/edit/<%= id %>" method="post" name="form1">
+	<table width="25%" border="0" id="users">
+		<tr>
+			<td>Nome</td>
+			<td><input type="text" name="name" id="name" value="<%= name %>" /></td>
+		</tr>
+		<tr>
+			<td>Usuário</td>
+			<td><input type="text" name="tld" id="tld" value="<%= tld %>" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="Submit" value="Edit" /></td>
+		</tr>
+	</table>
+	<input type="hidden" name="_method" value="PUT" />
+</form>
+
+<% include ../../views/partials/header %>
